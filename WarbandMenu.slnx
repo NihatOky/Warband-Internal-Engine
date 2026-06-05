@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="WarbandMenu/WarbandMenu.vcxproj" Id="24cdc89a-fdbf-46a1-97e6-67b0cb1336ae" />
+</Solution>
