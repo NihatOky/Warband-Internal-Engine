@@ -1,9 +1,7 @@
 #include "Hook.h"
 #include <iostream>
 
-// ======================================================
-// GLOBALS & HOOK ADRESLERİ
-// ======================================================
+
 uintptr_t g_ModuleBase = (uintptr_t)GetModuleHandleA("mb_warband.exe");
 EndScene_t oEndScene = nullptr;
 Reset_t oReset = nullptr;
