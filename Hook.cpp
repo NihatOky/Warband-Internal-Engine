@@ -19,9 +19,6 @@ BYTE g_GoldOrig[6] = { 0 };
 
 
 
-// ======================================================
-// ASSEMBLY HOOKS
-// ======================================================
 void __declspec(naked) GodmodeHook() {
     __asm {
         // 1. Kendi kodumuzu çalıştır
