@@ -24,7 +24,7 @@ void __declspec(naked) GodmodeHook() {
         // 1. Kendi kodumuzu çalıştır
         cmp dword ptr[esi + 0x34], 1
         je PLAYER
-        fst dword ptr[esi + 0x6000] // Orijinal oyun kodu
+        fst dword ptr[esi + 0x6000] 
         jmp GOTO_ORIGINAL
 
         PLAYER :
@@ -111,7 +111,7 @@ void DrawMenu(IDirect3DDevice9* pDevice)
         0,
         0);
 
-    // Başlık çubuğu
+
     D3DRECT header = { 50, 50, 300, 80 };
     pDevice->Clear(
         1,
@@ -121,7 +121,7 @@ void DrawMenu(IDirect3DDevice9* pDevice)
         0,
         0);
 
-    // Çerçeve
+  
     D3DXVECTOR2 border[] =
     {
         {50, 50},
@@ -135,7 +135,7 @@ void DrawMenu(IDirect3DDevice9* pDevice)
     pLine->Draw(border, 5, D3DCOLOR_ARGB(255, 0, 180, 255));
     pLine->End();
 
-    // Başlık
+    
     RECT rHeader = { 60, 55, 290, 80 };
 
     pFont->DrawTextA(
@@ -159,7 +159,7 @@ void DrawMenu(IDirect3DDevice9* pDevice)
         DT_LEFT,
         D3DCOLOR_XRGB(255, 255, 255));
 
-    // Alt bilgi
+   
     RECT rVersion = { 65, 145, 290, 170 };
 
     pFont->DrawTextA(
@@ -197,7 +197,7 @@ void HookD3D() {
     HWND hwnd = FindWindowA(NULL, "Mount&Blade Warband");
     if (!hwnd) return;
 
-    // Orijinal baytları yedekle
+   
     memcpy(g_GodOrig, (void*)(g_ModuleBase + 0x9EE54), 6);
     memcpy(g_GoldOrig, (void*)(g_ModuleBase + 0x1472BF), 6);
 
